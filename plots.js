@@ -57,8 +57,7 @@ function buildCharts(sample){
         var otu_labels = result.otu_labels;
         otu_ids_string = otu_ids.map(otu_ids => `OTU ${otu_ids}`);
 
-        var wfreq = result.wfreq;
-        console.log(result.wfreq);
+  
         var trace = {
             x: sample_values.slice(0,10).reverse(),
             y: otu_ids_string.slice(0,10).reverse(),
