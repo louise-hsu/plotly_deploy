@@ -16,7 +16,7 @@ function init() {
 
 
   
-    init();
+init();
 
 function optionChanged(newSample) {
     buildMetadata(newSample);
@@ -57,7 +57,8 @@ function buildCharts(sample){
         var otu_labels = result.otu_labels;
         otu_ids_string = otu_ids.map(otu_ids => `OTU ${otu_ids}`);
 
-        // var wfreq = result.wfreq;
+        var wfreq = result.wfreq;
+        console.log(result.wfreq);
         var trace = {
             x: sample_values.slice(0,10).reverse(),
             y: otu_ids_string.slice(0,10).reverse(),
@@ -71,11 +72,12 @@ function buildCharts(sample){
         var layout = {
           title: "Top 10 bacterial species (OTUs)",
         // xaxis: { title: "" },
-          yaxis: { title: ""},
+        // yaxis: { title: ""},
           margin: {t:50, l:150}
         };
         Plotly.newPlot("bar", data, layout);
- 
+        
+
 
         // bubble d
         var trace1 = {
@@ -85,7 +87,7 @@ function buildCharts(sample){
             mode: 'markers',
             marker: {
               color: otu_ids,
-              colorscale: 'Viridis',
+              colorscale: 'Earth',
               size: sample_values
             }
           };
