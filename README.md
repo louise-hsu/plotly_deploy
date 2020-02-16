@@ -45,4 +45,6 @@ Use otu_labels for the text values.
 
 The purpose of the challenge is to be able to filter and pick a indivual's data, which gives you the overview: ID, ethnicity, gender, location, BBType, and wash frequency. 
 
-Once you pick an individual, you can view a horizontal bar chart with the top 10 baterical species found. Moreover, you can view a bubble chart which will show the otu id and value according to x and y axis, and the size of the marker will depend on the sample value according to otud_id colors. 
+Once you pick an individual, you can view a horizontal bar chart with the top 10 baterical species found. Moreover, you can view a bubble chart which will show the otu id and value according to x and y axis, and the size of the marker will depend on the sample value according to otu_id colors. 
+
+The Gauge associates and pulls data from the wfreq (frequency of washes) on the individuals data. wfreq is pulled from metadata. Since there is a maximum of 9 washes/categories, in order to calculate and get the arrow moving correctly, you need to times the number of washer by 20 degress (180/9 = 20). 
