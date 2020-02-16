@@ -82,7 +82,7 @@ function buildCharts(sample){
           title: "Top 10 bacterial species (OTUs)",
         // xaxis: { title: "" },
         // yaxis: { title: ""},
-          
+          text: otu_labels,
           margin: {t:50, l:150}
         };
         Plotly.newPlot("bar", data, layout);
