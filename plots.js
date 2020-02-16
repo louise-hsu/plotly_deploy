@@ -11,7 +11,7 @@ function init() {
                 .property("value", sample);
         
         });
-        // optionChanged(sampleNames[0]);
+        optionChanged(sampleNames[0]);
     })}
 
 
