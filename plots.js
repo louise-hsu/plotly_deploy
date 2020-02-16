@@ -71,7 +71,8 @@ function buildCharts(sample){
             x: sample_values.slice(0,10).reverse(),
             y: otu_ids_string.slice(0,10).reverse(),
             type: "bar",
-            orientation: "h"
+            orientation: "h",
+            text: otu_labels
           };
 
         //console.log(otu_ids.slice(0,10));
@@ -81,6 +82,7 @@ function buildCharts(sample){
           title: "Top 10 bacterial species (OTUs)",
         // xaxis: { title: "" },
         // yaxis: { title: ""},
+          
           margin: {t:50, l:150}
         };
         Plotly.newPlot("bar", data, layout);
